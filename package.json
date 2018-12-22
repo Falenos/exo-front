@@ -1,0 +1,30 @@
+{
+  "name": "exo-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --port 9000",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Falenos/exo-front.git"
+  },
+  "author": "kakavas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Falenos/exo-front/issues"
+  },
+  "homepage": "https://github.com/Falenos/exo-front#readme",
+  "dependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.11"
+  }
+}
