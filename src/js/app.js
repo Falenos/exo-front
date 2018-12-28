@@ -1,3 +1,1 @@
-function test () {
-  return null;
-};
+import styles from '../styles/styles.scss'
