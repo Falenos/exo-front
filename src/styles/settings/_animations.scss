@@ -1,0 +1,7 @@
+$animation-timing: 0.2s;
+$animation-default-bezier-curve: cubic-bezier(0.25, 0.1, 0.25, 1);
+$animation-inverse-bezier-curve: cubic-bezier(0.55, 0.01, 0.73, 0.95);
+
+$animation-transition-drop-down-timing: 0.5s;
+$animation-transition-drop-down-curve: cubic-bezier(0, 1, 0, 1);
+$animation-transition-drop-down-curve-inverse: cubic-bezier(1, 0, 1, 0);

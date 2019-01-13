@@ -1,0 +1,10 @@
+$background-color: $color-gray-extra-light!default;
+
+body {
+  color: $font-color;
+  font-family: $font-default;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+}

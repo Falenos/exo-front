@@ -1,0 +1,14 @@
+.footer {
+  padding: 20px 0 50px;
+  position: relative;
+
+  &:before {
+    @extend .deco;
+    content: '';
+  }
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+}

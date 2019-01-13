@@ -1,0 +1,95 @@
+$type-styles: (
+  heading-1: (
+    breakpoints: (
+      0: (
+        sz: 28px,
+        lh: 28px,
+        ls: 0,
+      ),
+      sm: (
+        sz: 32px,
+        lh: 32px,
+        ls: 0,
+      ),
+      md: (
+        sz: 32px,
+        lh: 32px,
+        ls: 0,
+      ),
+      lg: (
+        sz: 32px,
+        lh: 32px,
+        ls: 0,
+      ),
+      xl: (
+        sz: 32px,
+        lh: 32px,
+        ls: 0,
+      ),
+    )
+  ),
+  link: (
+    breakpoints: (
+      0: (
+        sz: 20px,
+        ls: 2px,
+        lh: normal
+      ),
+      sm: (
+        sz: 20px,
+        ls: 2px,
+      ),
+      md: (
+        sz: 20px,
+        ls: 2px,
+      ),
+      lg: (
+        sz: 20px,
+        ls: 2px,
+      ),
+      xl: (
+        sz: 20px,
+        ls: 2px,
+      ),
+    )
+  ),
+  text: (
+    breakpoints: (
+      0: (
+        sz: 14px,
+        lh: 20px
+      ),
+      sm: (
+        sz: 14px,
+      ),
+      md: (
+        sz: 14px,
+      ),
+      lg: (
+        sz: 14px,
+      ),
+      xl: (
+        sz: 14px,
+      ),
+    )
+  ),
+  text-lg: (
+    breakpoints: (
+      0: (
+        sz: 18px,
+      ),
+      sm: (
+        sz: 18px,
+      ),
+      md: (
+        sz: 18px,
+      ),
+      lg: (
+        sz: 18px,
+      ),
+      xl: (
+        sz: 18px,
+      ),
+    )
+  ),
+);

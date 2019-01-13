@@ -1,0 +1,19 @@
+$separator-xxl: 240px !default;
+$separator-xl: 120px !default;
+$separator-lg: 60px !default;
+$separator-md: 32px !default;
+$separator-sm: 24px !default;
+$separator-xs: 16px !default;
+$separator-xxs: 10px !default;
+$separator-xxxs: 5px !default;
+
+$separators: (
+  xxl: $separator-xxl,
+  xl : $separator-xl,
+  lg : $separator-lg,
+  md : $separator-md,
+  sm : $separator-sm,
+  xs : $separator-xs,
+  xxs : $separator-xxs,
+  xxxs : $separator-xxxs
+);

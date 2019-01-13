@@ -1,0 +1,55 @@
+.article-section__date {
+  @extend .type, .type--text, .type--color-gray;
+  display: block;
+  line-height: 18px;
+}
+
+.article-section__content {
+  margin-top: 14px;
+  blockquote {
+    @extend .type, .type--text-lg, .type--color-gray-darker, .type--family-merriweather;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 12%;
+    text-align: center;
+    font-style: italic;
+    line-height: 24px;
+    font-weight: bold;
+    transform: translateX(-4%);
+
+    &:before,
+    &:after {
+      content: '';
+      width: 70%;
+      display: block;
+      height: 1px;
+      background-color: $color-gray-light;
+    }
+
+    &:before {
+      margin-bottom: 15px;
+    }
+
+    &:after {
+      margin-top: 10px;
+    }
+  }
+
+  figure {
+    margin: 12px 20px 10px 0;
+    float: left;
+
+    img {
+      padding: 2px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    figcaption {
+      color: $color-gray;
+      font-size: 11px;
+      margin-top: 2px;
+    }
+  }
+}

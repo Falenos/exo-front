@@ -1,0 +1,13 @@
+$link-color: $color-green !default;
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  transition: color $animation-timing $animation-default-bezier-curve;
+
+  &:hover {
+    color: $color-green-dark;
+  }
+}

@@ -1,0 +1,17 @@
+@mixin type($sz, $ls, $lh, $fw) {
+  @if $sz {
+    font-size: $sz;
+  }
+
+  @if $ls {
+    letter-spacing: $ls;
+  }
+
+  @if $lh {
+    line-height: $lh;
+  }
+
+  @if $fw {
+    font-weight: $fw;
+  }
+}

@@ -1,0 +1,51 @@
+$menu-icon-width: 26px;
+$menu-icon-height: 20px;
+$menu-icon-line-height: 2px;
+
+.menu-icon {
+  position: relative;
+  width: $menu-icon-width;
+  height: $menu-icon-height;
+}
+
+.menu-icon__line {
+  position: absolute;
+  width: 100%;
+  height: $menu-icon-line-height;
+  background-color: #333333;
+  left: 0;
+  border-radius: 1px;
+
+  &--top {
+    top: 0;
+    transform-origin: 0 0;
+    transition: transform $animation-timing * 1.2 $animation-default-bezier-curve;
+
+    .header__button--open & {
+      transform: rotate(405deg);
+    }
+  }
+
+  &--middle {
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transform-origin: 0 50%;
+    transition: opacity $animation-timing * 1.2 $animation-default-bezier-curve, transform $animation-timing * 1.2 $animation-default-bezier-curve;
+
+    .header__button--open & {
+      transition: opacity $animation-timing $animation-default-bezier-curve, transform $animation-timing * 1.2 $animation-default-bezier-curve;
+      transform: translateY(-50%) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  &--bottom {
+    bottom: 0;
+    transform-origin: 0 100%;
+    transition: transform $animation-timing * 1.2 $animation-default-bezier-curve;
+
+    .header__button--open & {
+      transform: rotate(315deg);
+    }
+  }
+}

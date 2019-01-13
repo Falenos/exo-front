@@ -1,0 +1,12 @@
+$icon-sizes: () !default;
+$icon-class: 'icon';
+
+.#{$icon-class} {
+  transition: color $animation-timing $animation-default-bezier-curve;
+
+  @each $key, $size in $icon-sizes {
+    &--#{$key} {
+      font-size: $size;
+    }
+  }
+}

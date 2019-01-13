@@ -1,0 +1,17 @@
+@mixin sectionDistance($property) {
+  @each $breakpointKey, $breakpoint in $breakpoints {
+    @if $breakpointKey == 0 {
+      $section-padding-initial-value: map_get($section-padding-list, 0);
+      #{$property}: $section-padding-initial-value;
+    }
+    @else {
+      $section-padding-current-breakpoint-value: map_get($section-padding-list, $breakpointKey);
+
+      @if $section-padding-current-breakpoint-value {
+        @include respond-to($breakpointKey) {
+          #{$property}: $section-padding-current-breakpoint-value;
+        }
+      }
+    }
+  }
+}

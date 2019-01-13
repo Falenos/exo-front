@@ -1,0 +1,6 @@
+@mixin trigger($selector) {
+  #{$selector} &,
+  &#{$selector} {
+    @content;
+  }
+}

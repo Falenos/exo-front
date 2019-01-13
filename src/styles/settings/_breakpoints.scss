@@ -1,0 +1,36 @@
+$breakpoint-0: 0;
+$breakpoint-xxs: 375px;
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1025px;
+$breakpoint-lg: 1280px;
+$breakpoint-xl: 1440px;
+$breakpoint-infinite: 20000px;
+
+$breakpoint-xxs-min: $breakpoint-xxs;
+$breakpoint-xxs-max: $breakpoint-xs - 1px;
+
+$breakpoint-xs-min: $breakpoint-xs;
+$breakpoint-xs-max: $breakpoint-sm - 1px;
+
+$breakpoint-sm-min: $breakpoint-sm;
+$breakpoint-sm-max: $breakpoint-md - 1px;
+
+$breakpoint-md-min: $breakpoint-md;
+$breakpoint-md-max: $breakpoint-lg - 1px;
+
+$breakpoint-lg-min: $breakpoint-lg;
+$breakpoint-lg-max: $breakpoint-xl - 1px;
+
+$breakpoint-xl-min: $breakpoint-xl;
+$breakpoint-xl-max: $breakpoint-infinite;
+
+$breakpoints: (
+  0: $breakpoint-0,
+  xxs: $breakpoint-xxs,
+  xs: $breakpoint-xs,
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl
+) !default;

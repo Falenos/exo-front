@@ -1,0 +1,116 @@
+// /*
+// * Oscillate animations
+// *
+// */
+
+// @keyframes oscillate-up-down {
+//   0% {
+//     transform: translateY(0);
+//   }
+
+//   50% {
+//     transform: translateY(10px);
+//   }
+
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
+
+// @mixin oscillate-up-down {
+//   animation-name: oscillate-up-down;
+//   animation-duration: 1s;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: linear;
+//   animation-fill-mode: both;
+// }
+
+// .oscillate-up-down {
+//   @include oscillate-up-down;
+// }
+
+// @keyframes oscillate-right-left {
+//   0% {
+//     transform: translateX(0);
+//   }
+
+//   50% {
+//     transform: translateX(10px);
+//   }
+
+//   100% {
+//     transform: translateX(0);
+//   }
+// }
+
+// @mixin oscillate-right-left {
+//   animation-name: oscillate-right-left;
+//   animation-duration: 1s;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: linear;
+//   animation-fill-mode: both;
+// }
+
+// .oscillate-right-left {
+//   @include oscillate-right-left;
+// }
+
+// @keyframes oscillate-left-right {
+//   0% {
+//     transform: translateX(0);
+//   }
+
+//   50% {
+//     transform: translateX(-10px);
+//   }
+
+//   100% {
+//     transform: translateX(0);
+//   }
+// }
+
+// @mixin oscillate-left-right {
+//   animation-name: oscillate-left-right;
+//   animation-duration: 1s;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: linear;
+//   animation-fill-mode: both;
+// }
+
+// .oscillate-left-right {
+//   @include oscillate-left-right;
+// }
+
+// @keyframes oscillate-left-and-right {
+//   0% {
+//     transform: translateX(0);
+//   }
+
+//   25% {
+//     transform: translateX(-10px);
+//   }
+
+//   50% {
+//     transform: translateX(0);
+//   }
+
+//   75% {
+//     transform: translateX(10px);
+//   }
+
+//   100% {
+//     transform: translateX(0);
+//   }
+// }
+
+// @mixin oscillate-left-and-right {
+//   animation-name: oscillate-left-and-right;
+//   animation-duration: 2s;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: linear;
+//   animation-fill-mode: both;
+// }
+
+// .oscillate-left-and-right {
+//   @include oscillate-left-and-right;
+// }

@@ -1,0 +1,3 @@
+@function getGridWidth($divider) {
+  @return 100 / $divider * 1%;
+}

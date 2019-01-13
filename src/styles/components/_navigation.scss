@@ -1,0 +1,100 @@
+.navigation {
+  @extend .container;
+  @extend .position--stretch;
+  height: 100%;
+  position: relative;
+
+  &:before {
+    @extend .position;
+    @extend .position--parent-aligned;
+    @extend .background--color-gray-lighter;
+    content: '';
+    display: block;
+    opacity: 0.9;
+
+    @include respond-to(md) {
+      display: none;
+    }
+  }
+
+  @include respond-to(md) {
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+  }
+}
+
+.navigation__items {
+  padding-top: 60px;
+  position: relative;
+
+  @include respond-to(md) {
+    display: flex;
+    align-items: stretch;
+    padding-top: 0;
+  }
+}
+
+.navigation__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include respond-to(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include respond-to(md) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navigation__link {
+  color: $color-gray-darker;
+
+  @include respond-to(md) {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 20px;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: background-color $animation-timing $animation-default-bezier-curve, border-color $animation-timing $animation-default-bezier-curve;
+
+    &:hover {
+      background-color: $color-gray-lighter;
+      border: 1px solid $color-gray-light;
+    }
+  }
+}
+
+.navigation__header {
+  display: none;
+}
+
+.navigation__title {
+  @extend .type, .type--text-lg;
+  text-align: right;
+  font-weight: normal;
+  transition: color $animation-timing $animation-default-bezier-curve;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include respond-to(md) {
+    justify-content: center;
+    color: $color-gray-darker;
+    text-transform: uppercase;
+    padding-top: 3px;
+  }
+
+  .navigation__link:hover & {
+    color: $color-gray-dark;
+
+    @include respond-to(md) {
+      color: $color-gray-dark;
+    }
+  }
+}

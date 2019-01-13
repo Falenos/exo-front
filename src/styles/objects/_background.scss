@@ -1,0 +1,34 @@
+$background-class: 'background';
+$colors: ()!default;
+
+.#{$background-class} {
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--cover {
+    background-size: cover;
+  }
+
+  &--contain {
+    background-size: contain;
+  }
+
+  &--full-size {
+    background-size: 100% auto;
+  }
+
+  &--hover-scale {
+    transition: transform $animation-timing $animation-default-bezier-curve;
+
+    &:hover,
+    .background__hover-trigger:hover & {
+      transform: scale(1.05);
+    }
+  }
+
+  @each $key, $color in $colors {
+    &--color-#{$key} {
+      background-color: $color;
+    }
+  }
+}

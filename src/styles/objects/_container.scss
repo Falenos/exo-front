@@ -1,0 +1,40 @@
+$container-width-list: () !default;
+$container-padding-list: () !default;
+
+$breakpoints: () !default;
+
+$container-class: 'container';
+
+.#{$container-class} {
+  width: 100%;
+  margin: 0 auto;
+
+  @each $breakpointKey, $breakpoint in $breakpoints {
+    @if $breakpointKey == 0 {
+      $container-width-initial: map_get($container-width-list, 0);
+      $container-padding-initial: map_get($container-padding-list, 0);
+      max-width: $container-width-initial;
+      padding-left: $container-padding-initial;
+      padding-right: $container-padding-initial;
+    }
+    @else {
+      $container-current-breakpoint-width: map_get($container-width-list, $breakpointKey);
+      $container-current-breakpoint-padding: map_get($container-padding-list, $breakpointKey);
+
+      @include respond-to($breakpointKey) {
+        @if $container-current-breakpoint-width {
+          max-width: $container-current-breakpoint-width;
+        }
+
+        @if $container-current-breakpoint-padding {
+          padding-left: $container-current-breakpoint-padding;
+          padding-right: $container-current-breakpoint-padding;
+        }
+      }
+    }
+  }
+
+  &--unlimited {
+    max-width: none!important;
+  }
+}

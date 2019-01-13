@@ -1,0 +1,35 @@
+/**
+ * Converts Photoshop's letter spacing value to em
+ *
+ * @returns em
+ */
+@function photoshop-letter-spacing-to-em($photoshop-value: 0) {
+  @return $photoshop-value / 1000 * 1em;
+}
+
+/**
+ * Converts Photoshop's letter spacing value to pixels
+ *
+ * @returns px
+ */
+@function photoshop-letter-spacing-to-px($photoshop-value: 0) {
+  @return $photoshop-value / 1000 / 16 * 1px;
+}
+
+/**
+ * Converts pixels to ems
+ *
+ * @returns em
+ */
+@function px-to-em ($px) {
+  @return $px / 16 * 1em;
+}
+
+/**
+ * Calculates the proportion of a font size to the breakpoint size that font resizing will start
+ *
+ * @returns proportion
+ */
+@function get-proportion ($dividend, $divisor) {
+  @return $dividend / $divisor;
+}

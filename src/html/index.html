@@ -1,15 +1,260 @@
 <!-- <%= htmlWebpackPlugin.options.customMetaOutput %> -->
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-	<base href="<%= htmlWebpackPlugin.options.baseHref %>">
+	<title>Exozet front-end</title>
+	<base href="">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-<div id="app">
-  <p>Hello</p>
-</div>
+<body id="app">
+	<div id="page-wrapper" class="page-wrapper">
+		<header class="header header--overlay">
+			<div class="header__container">
+				<div class="header__inner">
+					<div class="header__logo">
+						<div class="logo">
+							<a class="logo__link" href="#" title="Back to home page!">
+								<img src="../assets/images/exozet-logo.svg" alt="Exozet logo">							
+							</a>
+						</div>
+					</div>
+		
+					<div class="header__navigation" data-menu-element>
+						<nav class="navigation">
+							<ul class="navigation__items">
+								<li class="navigation__item">
+									<a class="navigation__link" href="#" title="News">
+										<h2 class="navigation__title">News</h2>
+									</a>
+								</li>
+								<li class="navigation__item">
+									<a class="navigation__link" href="#" title="Kontakt">
+										<h2 class="navigation__title">Kontakt</h2>
+									</a>
+								</li>
+								<li class="navigation__item">
+									<a class="navigation__link" href="#" title="Impressum">
+										<h2 class="navigation__title">Impressum</h2>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+		
+					<div class="header__button-cont">
+						<a href="#" class="header__button" title="Click to open the menu">
+							<div class="menu-icon">
+								<div class="menu-icon__line menu-icon__line--top"></div>
+								<div class="menu-icon__line menu-icon__line--middle"></div>
+								<div class="menu-icon__line menu-icon__line--bottom"></div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+				<div class="grid grid--gutter-0-default">
+					<main class="grid__col grid__col--0-12 grid__col--md-8">
+						<section class="section">
+							<article>
+								<time class="article-section__date" datetime="2012-02-20 19:02">20.02.2012 | 19:02 Uhr</time>
+	
+								<h3 class="section-title section-title--separated">
+									Long Headlinetext
+								</h3>				
+								<div class="article-section__content">
+									<p>Es gibt im Moment in diese Mannschaft, oh, einige Spieler vergessen ihnen Profi was sie sind. Ich lese nicht sehr viele Zeitungen,
+										aber ich habe gehört viele Situationen. Erstens: wir haben nicht offensiv gespielt. Es gibt keine deutsche Mannschaft spielt 
+										offensiv und die Name offensiv wie Bayern.</p><br/>
+									<p>Letzte Spiel hatten wir in Platz drei Spitzen: Elber, Jancka und dann Zickler. Wir müssen nicht vergessen Zickler. 
+										Zickler ist eine Spitzen mehr, Mehmet eh mehr Basler. Ist klar diese Wörter, ist möglich verstehen, was ich hab gesagt? Danke.</p><br/>
+									<blockquote>„Ein Trainer ist nicht ein Idiot! Ein Trainer sei sehen was passieren in Platz.“ – Trapattoni ’98</blockquote><br/>
+									<p>Offensiv, offensiv ist wie machen wir in Platz. Zweitens: ich habe erklärt mit diese zwei Spieler: nach Dortmund brauchen vielleicht 
+										Halbzeit Pause. Ich habe auch andere Mannschaften gesehen in Europa nach diese Mittwoch. Ich habe gesehen auch zwei Tage die Training.</p>
+									<figure><img src="../assets/images/image.jpg" alt="missing"/><figcaption>© Lorempixel.com</figcaption></figure>
+									<p>Ich habe fertig! . . . wenn es gab Fragen, ich kann Worte wiederholen. . . Es gibt im Moment in diese Mannschaft, oh, einige Spieler 
+										vergessen ihnen Profi was sie sind. Ich lese nicht sehr viele Zeitungen, aber ich habe gehört viele Situationen. Erstens: wir haben nicht 
+										offensiv gespielt. Es gibt keine deutsche Mannschaft spielt offensiv und die Name offensiv wie Bayern. Letzte Spiel hatten wir in Platz 
+										drei Spitzen: Elber, Jancka und dann Zickler. Wir müssen nicht vergessen Zickler. 
+										Zickler ist eine Spitzen mehr, Mehmet eh mehr Basler. Ist klar diese Wörter, ist möglich verstehen, was ich hab gesagt? Danke. Offensiv, 
+										offensiv ist wie machen wir in Platz. Zweitens: ich habe erklärt mit diese zwei Spieler: nach Dortmund brauchen vielleicht Halbzeit Pause. 
+										Ich habe auch andere Mannschaften gesehen in Europa nach diese Mittwoch.</p>
+								</div>
+							</article>
+						</section>
+	
+						<section class="section">
+							<h3 class="section-title section-title--separated">
+								Formular
+							</h3>
+						
+							<div class="grid grid--gutter-0-default">
+								<div class="grid__col grid__col--0-12 grid__col--sm-6 grid__col--offset-sm-3">
+									<div class="form__wrapper">
+										<p class="form__text">Felder mit einem * sind Pflichtfelder.</p>
+						
+										<p class="form__text type--color-alert">Fehlermeldung</p>
+						
+										<form class="form" action="#" method="POST">
+											<div class="form__input-container">
+												<label for="name">Name*</label>
+												<input id="name" type="text" name="name" required>
+											</div>
+						
+											<div class="form__input-container">
+												<label for="email">E-Mail*</label>
+												<input id="email" type="email" name="email" required>
+											</div>
+						
+											<div class="form__input-container">
+												<label for="phone">Telefon</label>
+												<input id="phone" type="number" name="phone">
+											</div>
+						
+											<div class="form__input-container">
+												<label for="comments">Kommentar*</label>
+												<textarea id="comments" name="comments" required></textarea>
+											</div>
+						
+											<div class="form__input-container form__input-container--button">
+												<button class="button" type="submit">Abschicken</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						
+						</section>
+	
+						<section class="section">
+
+							<h3 class="section-title section-title--compact-separated">
+								Leistungsumfang
+							</h3>
+						
+							<div class="two-columns__container grid grid--gutter-0-default">
+								<div class="grid__col grid__col--0-12 grid__col--sm-6">
+									<ol class="two-columns__list">
+										<li>Lorem</li>
+										<li>Ipsum</li>
+										<li>Dolor</li>
+										<li>Sit</li>
+									</ol>
+								</div>
+						
+								<div class="grid__col grid__col--0-12 grid__col--sm-6">
+									<address>
+										Exozet: GmbH<br/>
+										Mitarbeiter: ca. 150<br/>
+										Groups: Games, Interact, Effects<br/>
+										Gründung: 1996
+									</address>
+								</div>
+							</div>
+						</section>
+					</main>
+	
+					<aside class="grid__col grid__col--0-12 grid__col--md-3 grid__col--offset-md-1">
+						<div class="grid grid--gutter-0-default">
+							<div class="grid__col grid__col--0-12 grid__col--sm-4 grid__col--md-12">
+								<section class="section section--bottom-s-padding">
+
+									<h3 class="section-title section-title--separated section-title--small">
+										Interne Linkliste
+									</h3>
+								
+									<ul class="list list--icon list--theme-green">
+										<li class="list__item">
+											<a href="#" title="Link Number 1">
+												<i class="list__icon icon icon--arrow-right"></i>
+												<span>Link Number 1</span>
+											</a>
+										</li>
+										<li class="list__item">
+											<a href="#" title="Link Number 2">
+												<i class="list__icon icon icon--arrow-right"></i>
+												<span>Link Number 2</span>
+											</a>
+										</li>
+										<li class="list__item">
+											<a href="#" title="Link Number 3">
+												<i class="list__icon icon icon--arrow-right"></i>
+												<span>Link Number 3</span>
+											</a>
+										</li>
+									</ul>
+								</section>
+							</div>
+					
+							<div class="grid__col grid__col--0-12 grid__col--sm-4 grid__col--md-12">
+								<section class="section section--bottom-s-padding">
+
+									<h3 class="section-title section-title--separated section-title--small">
+										Kontakt
+									</h3>
+								
+									<address class="contact__address">
+										Exozet Berlin GmbH<br/>
+										Platz der Luftbrücke 4-6<br/>
+										12101 Berlin
+									</address>
+								
+									<div class="contact__link">
+										<i class="icon icon--phone"></i>
+										<span class="contact__title">Tel.:</span>
+										<span>+49 (0)30 24 65 60 - 0</span>
+									</div>
+								
+									<div class="contact__link">
+										<i class="icon icon--email"></i>
+										<span class="contact__title">E-Mail:</span>
+										<a href="mailto:info@exozet.com" title="Call us">info@exozet.com</a>
+									</div>
+								</section>
+							</div>
+					
+							<div class="grid__col grid__col--0-12 grid__col--sm-4 grid__col--md-12">
+								<section class="section">
+
+									<h3 class="section-title section-title--separated section-title--small">
+										Image Teaser
+									</h3>
+								
+									<div class="teaser">
+										<img class="teaser__image" src="../assets/images/teaser.jpg" alt="Teaser Image"/>
+								
+										<div class="teaser__inner">
+											<p class="teaser__description">Es gibt im Moment in diese Mannschaft, oh einige Spieler!</p>
+											<a class="button button--full" href="#" title="Mehr lesen">Mehr lesen</a>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</aside>
+					
+				</div>
+			</div>
+
+      <footer class="footer">
+				<div class="container">
+					<div class="footer__inner">
+						<div class="footer__copy">
+							© exozet 2019
+						</div>
+			
+						<ul class="list list--inline list--straight list--vertical-separators list--theme-green flex flex--row">
+							<li class="list__item"><a href="#" title="News">News</a></li>
+							<li class="list__item"><a href="#" title="Kontakt">Kontakt</a></li>
+							<li class="list__item"><a href="#" title="Impressum">Impressum</a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+    </div>
 </body>
 </html>

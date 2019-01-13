@@ -1,0 +1,11 @@
+.two-columns__container {
+  @include respond-to(sm) {
+    padding-top: 20px;
+  }
+}
+
+.two-columns__list {
+  @include respond-to(sm) {
+    padding-left: 0.5em;
+  }
+}

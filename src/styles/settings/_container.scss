@@ -1,0 +1,27 @@
+$container-width-0: 1920px;
+$container-width-sm: 1920px;
+$container-width-md: 1920px;
+$container-width-lg: 1920px;
+$container-width-xl: 1920px;
+
+$container-width-list: (
+  0: $container-width-0,
+  sm: $container-width-sm,
+  md: $container-width-md,
+  lg: $container-width-lg,
+  xl: $container-width-xl,
+);
+
+$container-padding-0: 30px;
+$container-padding-sm: 30px;
+$container-padding-md: 30px;
+$container-padding-lg: 30px;
+$container-padding-xl: 30px;
+
+$container-padding-list: (
+  0: $container-padding-0,
+  sm: $container-padding-sm,
+  md: $container-padding-md,
+  lg: $container-padding-lg,
+  xl: $container-padding-xl,
+);

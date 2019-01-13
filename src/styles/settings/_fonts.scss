@@ -1,0 +1,12 @@
+$font-default: $font-titillium;
+
+$font-color: $color-black !default;
+
+$font-family-default: $font-default, 'Arial', 'Helvetica Neue', helvetica, sans-serif !default;
+
+$font-weights: (200, normal, bold);
+
+$font-families: (
+  titillium: $font-titillium,
+  merriweather: $font-merriweather,
+) !default;

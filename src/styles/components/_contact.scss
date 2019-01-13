@@ -1,0 +1,18 @@
+.contact__address {
+  margin-bottom: 1em;
+}
+
+.contact__link {
+  @extend .type, .type--text, .type--family-titillium;
+  display: flex;
+  align-items: center;
+
+  .icon {
+    font-size: 12px;
+    margin-right: 5px;
+  }
+}
+
+.contact__title {
+  margin-right: 5px;
+}

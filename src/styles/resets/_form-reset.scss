@@ -1,0 +1,19 @@
+form {
+  width: 100%;
+  display: block;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+  appearance: none;
+  overflow: auto;
+  border: none;
+  padding: 0;
+  width: 100%;
+  display: block;
+  border-radius: 0;
+}

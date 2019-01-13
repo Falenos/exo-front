@@ -1,0 +1,14 @@
+.logo {
+  width: 175px;
+  height: 39px;
+  display: block;
+
+  svg {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

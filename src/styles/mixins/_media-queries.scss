@@ -1,0 +1,73 @@
+$default-breakpoint: root;
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $current-breakpoint: $breakpoint !global;
+
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+
+    $current-breakpoint: $default-breakpoint !global;
+  }
+
+  @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. ' + 'Available breakpoints are: #{map-keys($breakpoints)}.';
+  }
+}
+
+@mixin respond-to-custom($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-up-to-custom($breakpoint) {
+  @media (max-width: $breakpoint - 1px) {
+    @content;
+  }
+}
+
+@mixin respond-up-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $value: map-get($breakpoints, $breakpoint) - 1;
+
+    @media (max-width: $value) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. ' + 'Available breakpoints are: #{map-keys($breakpoints)}.';
+  }
+}
+
+@mixin respond-to-range($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin retina() {
+  @media only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin portrait() {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin respond-to-wp-fixed-breakpoint() {
+  @media all and (min-width: $wp-fixed--breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-to-wp-small-nav-breakpoint() {
+  @media all and (min-width: $wp-small-nav-breakpoint) {
+    @content;
+  }
+}

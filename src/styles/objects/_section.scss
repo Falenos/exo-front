@@ -1,0 +1,72 @@
+$section-padding-list: () !default;
+
+$section-class: 'section';
+
+.#{$section-class} {
+  display: block;
+  position: relative;
+  width: 100%;
+
+  @each $breakpointKey, $breakpoint in $breakpoints {
+    @if $breakpointKey == 0 {
+      $section-padding-initial-value: map_get($section-padding-list, 0);
+      padding-top: $section-padding-initial-value;
+      padding-bottom: $section-padding-initial-value;
+    }
+    @else {
+      $section-padding-current-breakpoint-value: map_get($section-padding-list, $breakpointKey);
+
+      @if $section-padding-current-breakpoint-value {
+        @include respond-to($breakpointKey) {
+          padding-top: $section-padding-current-breakpoint-value;
+          padding-bottom: $section-padding-current-breakpoint-value;
+        }
+      }
+    }
+  }
+
+  &--full-height {
+    height: 100vh;
+
+    @include respond-to(md) {
+      min-height: $section-full-height-min-threshold;
+      max-height: $section-full-height-max-threshold;
+    }
+
+    .header:not(.header--overlay) + & {
+      height: calc(100vh - #{$header-height});
+
+      @include respond-to(md) {
+        height: calc(100vh - #{$header-height-md});
+      }
+
+      @include respond-to(lg) {
+        height: calc(100vh - #{$header-height-lg});
+      }
+
+      @include respond-to(xl) {
+        height: calc(100vh - #{$header-height-xl});
+      }
+    }
+  }
+
+  &--unpadded {
+    padding: 0!important;
+  }
+
+  &--unpadded-top {
+    padding-top: 0!important;
+  }
+
+  &--unpadded-bottom {
+    padding-bottom: 0!important;
+  }
+
+  &--bottom-s-padding {
+    padding-bottom: 10px!important;
+  }
+
+  &--bottom-sm-padding {
+    padding-bottom: 40px!important;
+  }
+}

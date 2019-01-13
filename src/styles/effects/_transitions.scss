@@ -1,0 +1,137 @@
+.transition-fade-in-up {
+  transition: opacity 0.8s $animation-default-bezier-curve, transform 0.8s $animation-default-bezier-curve;
+  opacity: 0;
+  transform: translateY(80px);
+
+  @include trigger('.start-animate') {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.transition-fade-in {
+  transition: opacity 0.8s $animation-default-bezier-curve;
+  opacity: 0;
+
+  @include trigger('.start-animate') {
+    opacity: 1;
+  }
+}
+
+.transition-fade-in-scale-out {
+  transition: opacity 0.8s $animation-default-bezier-curve, transform 0.8s $animation-default-bezier-curve;
+  transform: scale(1.1);
+  opacity: 0;
+
+  @include trigger('.start-animate') {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.transition-fade-in-background-in {
+  transition: opacity 0.8s $animation-default-bezier-curve, background 0.8s $animation-default-bezier-curve;
+  background-size: 180% auto!important;
+  opacity: 0;
+
+  @include trigger('.start-animate') {
+    opacity: 1;
+    background-size: 100% auto!important;
+  }
+}
+
+.transition-slide-down {
+  transition: opacity 0.8s $animation-default-bezier-curve, transform 0.8s $animation-default-bezier-curve;
+  opacity: 0;
+  transform: translateY(-100%);
+
+  @include trigger('.start-animate') {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.transition-scale-down {
+  transition: opacity 0.4s $animation-default-bezier-curve, max-height 0.45s $animation-transition-drop-down-curve;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+
+  @include trigger('.js-switch-on') {
+    transition: opacity 0.4s $animation-default-bezier-curve, max-height 0.45s $animation-transition-drop-down-curve-inverse;
+    opacity: 1;
+    max-height: 1000vh;
+  }
+
+  @include trigger('.open') {
+    transition: opacity 0.4s $animation-default-bezier-curve, max-height 0.45s $animation-transition-drop-down-curve-inverse;
+    opacity: 1;
+    max-height: 1000vh;
+  }
+
+  &--stop-sm-up {
+    @include respond-to(sm) {
+      max-height: none;
+      opacity: 1;
+    }
+  }
+
+  &--stop-md-up {
+    @include respond-to(md) {
+      max-height: none;
+      opacity: 1;
+    }
+  }
+}
+
+.transition-rotate-up-down {
+  transition: transform $animation-timing $animation-default-bezier-curve;
+  transform: rotate(90deg) scaleX(1);
+
+  @include trigger('.js-switch-on') {
+    transform: rotate(90deg) scaleX(-1);
+  }
+}
+
+.transition-open-horizontally {
+  overflow: hidden;
+  max-width: 0!important;
+  opacity: 0;
+
+  @include trigger('.start-animate') {
+    max-width: 100%!important;
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 20 {
+  .transition-delay-#{$i} {
+    $i: $i - 1;
+
+    $delay: 200 * $i;
+    transition-delay: #{$delay}ms;
+  }
+}
+
+@each $breakpoint-name, $breakpoint in $breakpoints {
+  .transition-delay-stop-#{$breakpoint-name}-up {
+    @include respond-to($breakpoint-name) {
+      transition-delay: 0ms !important;
+    }
+  }
+}
+
+@each $breakpoint-name, $breakpoint in $breakpoints {
+  .transition-delay-stop-#{$breakpoint-name}-down {
+    @include respond-up-to($breakpoint-name) {
+      transition-delay: 0ms !important;
+    }
+  }
+}
+
+@for $i from 1 through 50 {
+  .transition-duration-#{$i} {
+    $duration: 150 * $i;
+    transition-duration: #{$duration}ms;
+  }
+}

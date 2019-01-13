@@ -1,0 +1,88 @@
+.header {
+  height: $header-height;
+  display: flex;
+  width: 100%;
+  margin-bottom: 18px;
+  position: relative;
+
+  @include respond-to(md) {
+    height: $header-height-md;
+  }
+
+  @include respond-to(lg) {
+    height: $header-height-lg;
+  }
+
+  @include respond-to(xl) {
+    height: $header-height-xl;
+  }
+
+  &:after {
+    @extend .deco, .deco--bottom;
+    content: '';
+  }
+}
+
+.header__container {
+  @extend .container;
+  height: 100%;
+}
+
+.header__inner {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+
+  img {
+    max-height: 100%;
+  }
+}
+
+.header__navigation {
+  position: fixed;
+  width: 100%;
+  height: calc(100% - #{$header-height});
+  top: $header-height;
+  left: 0;
+  opacity: 0;
+  transform: translateX(-20%);
+  transition: transform $animation-timing $animation-default-bezier-curve, opacity $animation-timing * 0.9 $animation-default-bezier-curve;
+  pointer-events: none;
+
+  &--open {
+    z-index: 1000;
+    transition: transform $animation-timing $animation-inverse-bezier-curve, opacity $animation-timing 1.1 $animation-inverse-bezier-curve;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @include respond-to(md) {
+    position: static;
+    width: auto;
+    height: auto;
+    z-index: auto;
+    opacity: 1;
+    display: flex;
+    align-items: stretch;
+    transform: translateX(13px);
+    pointer-events: auto;
+  }
+}
+
+.header__button-cont {
+  display: flex;
+  align-items: center;
+
+  @include respond-to(md) {
+    display: none;
+  }
+}

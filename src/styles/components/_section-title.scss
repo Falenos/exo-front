@@ -1,0 +1,30 @@
+.section-title {
+  @extend .type, .type--heading-1, .type--color-gray-darker, .type--caps;
+  padding-bottom: 5px;
+
+  &:after {
+    content: '\002F';
+  }
+
+  &--separated {
+    border-bottom: 1px solid $color-gray-light;
+    margin-bottom: 10px;
+  }
+
+  &--compact-separated {
+    border-bottom: 1px solid $color-gray-light;
+    margin-bottom: 0px;
+  }
+
+  &--small {
+    @extend .type, .type--text-lg;
+    text-transform: none;
+    padding-bottom: 2px;
+    font-weight: normal;
+    line-height: normal;
+
+    &:after {
+      display: none;
+    }
+  }
+}

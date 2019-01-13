@@ -1,0 +1,58 @@
+.form {
+  display: block;
+  width: 100%;
+  padding-top: 2px;
+}
+
+.form__wrapper {
+  margin-top: 22px;
+  margin-bottom: -6px;
+}
+
+.form__text {
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+
+.form__input-container {
+  position: relative;
+  margin-bottom: 12px;
+
+  label {
+    @extend .type, .type--text;
+    white-space: nowrap;
+
+    @include respond-to(sm) {
+      position: absolute;
+      right: calc(100% + 20px);
+      top: 8px;
+    }
+  }
+
+  input,
+  textarea {
+    @extend .type, .type--text, .type--family-titillium;
+    width: 100%;
+    border: 1px solid $color-gray;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  input {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+  }
+
+  textarea {
+    padding: 5px;
+    min-height: 100px;
+    resize: none;
+  }
+
+  &--button {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

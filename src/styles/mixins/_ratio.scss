@@ -1,0 +1,3 @@
+@mixin ratio($x, $y) {
+  padding-top: $y / $x * 100%;
+}

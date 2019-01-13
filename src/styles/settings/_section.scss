@@ -1,0 +1,25 @@
+$section-padding-0: 20px;
+$section-padding-xxs: 20px;
+$section-padding-xs: 20px;
+$section-padding-sm: 20px;
+$section-padding-md: 20px;
+$section-padding-lg: 20px;
+$section-padding-xl: 20px;
+
+$section-extra-padding-xs: 0;
+$section-extra-padding-sm: 60px;
+$section-extra-padding-md: 90px;
+$section-extra-padding-lg: 100px;
+
+$section-padding-list: (
+  0: $section-padding-0,
+  xxs: $section-padding-xxs,
+  xs: $section-padding-xs,
+  sm: $section-padding-sm,
+  md: $section-padding-md,
+  lg: $section-padding-lg,
+  xl: $section-padding-xl
+);
+
+$section-full-height-max-threshold: 1000px;
+$section-full-height-min-threshold: 600px;

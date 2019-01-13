@@ -1,0 +1,14 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ol {
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+li {
+  @extend .type, .type--text, .type--family-titillium;
+}

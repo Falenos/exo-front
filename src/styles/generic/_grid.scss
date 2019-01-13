@@ -1,0 +1,112 @@
+$grid-class: 'grid';
+$breakpoints: () !default;
+
+$grid-default-gutter-width: 24px !default;
+$grid-columns: 12 !default;
+
+$grid-gutter-widths: (
+  'default': $grid-default-gutter-width,
+) !default;
+
+$grid-half-default-gutter-width: $grid-default-gutter-width / 2;
+
+.#{$grid-class} {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.#{$grid-class}__col {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+
+  &--wrapper {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+@each $breakpointKey, $breakpoint in $breakpoints {
+  @each $gutter-name, $gutter-width in $grid-gutter-widths {
+    .#{$grid-class}--gutter-#{$breakpointKey}-#{$gutter-name} {
+      $half-gutter: $gutter-width / 2;
+
+      @if $breakpointKey == 0 {
+        margin-left: -$half-gutter;
+        margin-right: -$half-gutter;
+
+        .#{$grid-class}__col {
+          padding-left: $half-gutter;
+          padding-right: $half-gutter;
+        }
+      }
+
+      @else {
+        @include respond-to($breakpointKey) {
+          margin-left: -$half-gutter;
+          margin-right: -$half-gutter;
+
+          .#{$grid-class}__col {
+            padding-left: $half-gutter;
+            padding-right: $half-gutter;
+          }
+        }
+      }
+    }
+  }
+}
+
+@each $breakpointKey, $breakpoint in $breakpoints {
+  @for $i from 1 through $grid-columns {
+    $width: $i / $grid-columns * 100%;
+
+    .#{$grid-class}__col--#{$breakpointKey}-#{$i} {
+      @if $breakpointKey == 0 {
+        flex-basis: $width;
+        width: $width;
+        max-width: $width;
+      }
+
+      @else {
+        @include respond-to($breakpointKey) {
+          flex-basis: $width;
+          width: $width;
+          max-width: $width;
+        }
+      }
+    }
+  }
+}
+
+@each $breakpointKey, $breakpoint in $breakpoints {
+  @for $i from 1 through $grid-columns {
+    $width: $i / $grid-columns * 100%;
+
+    .#{$grid-class}__col--offset-#{$breakpointKey}-#{$i} {
+      @if $breakpointKey == 0 {
+        margin-left: $width;
+      }
+
+      @else {
+        @include respond-to($breakpointKey) {
+          margin-left: $width;
+        }
+      }
+    }
+  }
+
+  .#{$grid-class}__col--offset-#{$breakpointKey}-0 {
+    @if $breakpointKey == 0 {
+      margin-left: 0;
+    }
+
+    @else {
+      @include respond-to($breakpointKey) {
+        margin-left: 0;
+      }
+    }
+  }
+}

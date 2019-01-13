@@ -1,0 +1,22 @@
+.hero {
+  @extend .background, .background--cover;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+
+  @include respond-to(sm) {
+    height: 285px;
+  }
+}
+
+.hero__title {
+  @extend .type, .type--heading-1, .type--color-white;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 5%;
+  transform: translateX(7.5px);
+}
